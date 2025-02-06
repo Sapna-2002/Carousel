@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Concept Furniture Clone</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+</head>
+<body class="bg-gray-100">
+
+    <!-- Navbar -->
+    <nav class="bg-white shadow-md fixed w-full top-0 z-10">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-orange-500"><i>Concept Furniture</i> </a>
+            <ul class="hidden md:flex space-x-6">
+                <li><a href="#" class="text-gray-600 hover:text-gray-900">Home</a></li>
+                <li><a href="#" class="text-gray-600 hover:text-gray-900">Products</a></li>
+                <li><a href="#" class="text-gray-600 hover:text-gray-900">About</a></li>
+                <li><a href="#" class="text-gray-600 hover:text-gray-900">Contact</a></li>
+            </ul>
+            <button class="md:hidden block text-gray-600 focus:outline-none">
+                ☰
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section with Carousel -->
+    <section class="relative w-full h-[600px] mt-16">
+        <div class="swiper heroSwiper">
+            <div class="swiper-wrapper">
+                <div class="relative h-[600px] w-full swiper-slide bg-cover bg-center flex items-center justify-center" style="background-image: url('u-1.webp');">
+                    <div class="pt-8 text-center">
+                        <h1 class="text-4xl text-white font-bold">Welcome To Concept</h1>
+                        <p class="text-white font-bold mt-2">Transforming spaces,one piece at a time.</p>
+                        <button class="mt-4 px-6 py-2 bg-black text-white rounded hover:bg-black ">
+                            Shop Now
+                        </button>
+                    </div>
+                </div>
+                <div class="relative h-[600px] w-full swiper-slide bg-cover bg-center flex items-center justify-center" style="background-image: url('u-2.webp');">
+                    <div class="pt-8  text-center">
+                        <h1 class="text-4xl text-gray-900 font-bold">Welcome To Concept</h1>
+                        <p class="text-gray-900 font-bold mt-2">Small space,big transformation.</p>
+                        <button class="mt-4 px-6 py-2 bg-black text-white rounded hover:bg-black">
+                            Explore More
+                        </button>
+                    </div>
+                </div>
+                <div class=" relative h-[600px] w-full swiper-slide bg-cover bg-center flex items-center justify-center " style="background-image: url('u-3.webp');">
+                    <div class="pt-8 text-center">
+                        <h1 class="text-4xl text-green-500 font-bold">Welcome To Concept</h1>
+                        <p class="text-green-500 font-bold mt-2">Inspired interiors, tailored for you.</p>
+                        <button class="mt-4 px-6 py-2 bg-black text-white rounded hover:bg-black">
+                            Browse Now
+                        </button>
+                    </div>
+                </div>
+                <div class=" relative h-[600px] w-full swiper-slide bg-cover bg-center flex items-center justify-center" style="background-image: url('u-4.jpg');">
+                    <div class="pt-8 text-center">
+                        <h1 class="text-4xl text-blue-400 font-bold">Welcome To Concept</h1>
+                        <p class="text-blue-400 font-bold mt-2">Timeless furniture for timeless spaces.</p>
+                        <button class="mt-4 px-6 py-2 bg-black text-white rounded hover:bg-black">
+                            Shop Now
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- Navigation Buttons -->
+            <div class="swiper-button-next text-white"></div>
+            <div class="swiper-button-prev text-white"></div>
+        </div>
+    </section>
+
+    <!-- Carousel Section for Featured Products -->
+    <section class="container mx-auto mt-10">
+        <h2 class="text-2xl font-bold text-center mb-4">Featured Products</h2>
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="img-5.jpg" alt="Furniture"></div>
+                <div class="swiper-slide"><img src="u-4.jpg" alt="Furniture"></div>
+                <div class="swiper-slide"><img src="img-5.jpg" alt="Furniture"></div>
+                <div class="swiper-slide"><img src="u-7.jpg" alt="Furniture"></div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-gray-800 text-white mt-10">
+        <div class="container mx-auto px-6 py-6 flex flex-col md:flex-row justify-between items-center">
+            <p>&copy; 2025 Concept Furniture. All rights reserved.</p>
+            <div class="flex space-x-4">
+                <a href="#" class="hover:text-gray-400">Facebook</a>
+                <a href="#" class="hover:text-gray-400">Instagram</a>
+                <a href="#" class="hover:text-gray-400">Twitter</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script>
+        // Hero Section Carousel
+        var heroSwiper = new Swiper(".heroSwiper", {
+            loop: false,
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+
+        // Featured Products Carousel
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 1,
+            spaceBetween: 10,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            breakpoints: {
+                640: { slidesPerView: 2, spaceBetween: 20 },
+                1024: { slidesPerView: 3, spaceBetween: 30 },
+            },
+        });
+    </script>
+
+</body>
+</html>
